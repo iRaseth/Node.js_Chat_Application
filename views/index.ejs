@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html ng-app="validateApp">
+  <head>
+    <title>AVSChat</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <link href="/css/indexstyles.css" rel="stylesheet" type="text/css">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Asap|Hind|Kanit|Rubik" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/js/customvalidate.js"></script>
+
+
+    <style>
+    html{
+      min-height:100%;height:100%;
+    }
+    body{
+      min-height:100%;height:100%;
+      position:relative;
+      background-color:rgb(145, 185, 255);
+      font-family: 'Hind', sans-serif;
+    }
+
+    </style>
+
+  </head>
+
+  <body>
+
+  
+  
+  <div class="container" ng-controller="valCtrl">
+
+    <div id="headerindex" class="row">
+        <header>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="logo">
+                <img src="images/partychat.png">
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
+            <h1 class="headertext">Welcome to the chat app !</h1>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-8">
+            <div class="social-icons">
+                <a href="#"><img src="images/facebook-square.svg" class="social-media-icon"></a>
+                <a href="#"><img src="images/info-circle.svg" class="social-media-icon"></a>                
+                <a href="#"><img src="images/instagram.svg" class="social-media-icon"></a>
+            </div>
+          </div>
+        </header>
+    </div>
+
+
+    <div id="main-container" class="row">
+      <div class="col-lg-7 col-md-6 col-sm-12 hidden-xs">
+
+      </div>
+
+      <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 id="first-h4" class="header-form">Registration</h4>
+                <form id="registerForm" class="index-Forms" name="register-form"  method="post" ng-submit="onRegister" action="/insert">
+                  <label>Insert necessary data in order to create your account.</label><br>
+                  <input class="register-input" type="text" id="login" name="login" placeholder="Enter login..."
+                  minlength="3" maxlength="7" pattern="[a-z]*" title="Only lowercase from 3 to 7 LETTERS." required>
+                  <input class="register-input" type="password" name="password" placeholder="Enter password..."
+                  minlength="6" maxlength="12" required><br>
+                  <input class="register-input" type="email" id="email" name="email"
+                  minlength="4" maxlength="22" placeholder="Enter email..." required>
+                  <input class="register-input" type="text" name="city" placeholder="Enter your city..."
+                  minlength="2" maxlength="22" pattern="^[A-Z]{1}[a-z]+" required><br>
+                  <input id="register-button" class="submit-Form" type="submit" name="submit" value="Add Name">
+                </form>
+              </div>
+              <div class="col-xs-12">
+                <h4 class="header-form">Login to the service</h4>
+                <form id="loginForm" class="index-Forms" method="post" action="/login">
+                  <label>Login to your account</label><br>
+                  <input autocomplete="off" class="register-input" type="text" name="username" placeholder="Enter login...">
+                  <input class="register-input" type="password" name="pass" placeholder="Enter your password..." required>
+                  <input class="submit-Form" type="submit" name="submit" value="Login" required>
+                </form>
+              </div>
+            </div>
+
+      </div>
+
+      </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+
+    <script>
+
+        var app = angular.module('validateApp',[]);
+        app.controller('valCtrl',['$scope', function($scope){
+
+        }]);
+    </script>
+
+  <body>
+<html>

@@ -1,0 +1,237 @@
+body{
+  background-image:url('../images/newbg.png');
+}
+/* Chat-room.ejs */
+#header-chatroom{
+  margin-left:10vw;
+  height:10vh;
+}
+.usernamebg{
+  font-family: 'Rubik', sans-serif;
+  font-size:20px;
+  width:25%;
+  margin-top:10px;
+  font-weight: 700;
+  border:0px;
+  background-color:rgb(242, 242, 242);
+  padding:10px 0px 10px 15px;
+  border-radius:15px;
+  box-shadow:0px 1px 5px 0px black,0px 0px 1px 0px black inset;
+  position:absolute;
+}
+#logo{
+  margin-top:-2px;
+  margin-right:15vw;
+  right:0;
+  position:absolute;
+  height:70px;
+}
+#logo img{
+	height:80px;
+}
+#header-chatroom input{
+  position:relative;
+  background-color:rgb(242, 242, 242);
+  border:0px;
+  width:5vw;
+}
+#typing{
+  position: absolute;
+  float: right;
+  right: 11vw;
+  bottom: 15vh;
+}
+#numberConnected{
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  width:15%;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 700;
+  border:0px;
+  background-color:rgb(242, 242, 242);
+  padding:10px 5px 10px 5px;
+  border-radius:15px;
+  box-shadow:0px 1px 5px 0px black,0px 0px 1px 0px black inset;
+  position:absolute;
+  left: 39vw;
+}
+@media all and (max-width:1000px){
+  #numberConnected{
+    left:37vw;
+    font-size:15px;
+    min-height:48px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #logo{
+    margin-right:10vw;
+  }
+}
+@media all and (max-width:767px){
+  #typing{
+    right: 2vw;
+    bottom: 10vh;
+  }
+  #header-chatroom{
+    height:60px;
+    margin-left:0;
+  }
+  .usernamebg{
+    min-width:30vw;
+    font-size:13px;
+    padding: 5px 0 5px 10px;
+  }
+  #numberConnected{
+    font-size:10px;
+    left: 33vw;
+    padding: 3px 3px 3px 3px;
+  }
+  #header-chatroom input{
+    width:25vw;
+  }
+  #logo img{
+    position:relative;
+    margin-top:5px;
+    margin-right:-7vw;
+    width:46vw;
+    height:60px;
+  }
+}
+
+#messages{
+  -webkit-box-shadow: 0 1px 10px black, 0px 0px 1px 0px black inset;
+        box-shadow: 0 1px 10px black, 0px 0px 1px 0px black inset;
+  margin-top:1vh;
+  background-color:rgb(242, 242, 242);
+  border-radius:20px;
+  height:75vh;
+  width:79vw;
+  margin-left:10vw;
+  padding:5px 0px 5px 0px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#messages::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: rgb(242, 242, 242);
+}
+
+#messages::-webkit-scrollbar
+{
+	width:8px;
+	background-color: rgba(0,0,0,0);
+}
+
+#messages::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgb(15, 106, 252);
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.3) 50%,
+											  transparent,
+											  transparent)
+}
+
+
+
+#messages p{
+  font-size:15px;
+  color:white;
+  background-color: rgb(150,150,150);
+  border-radius:10px;
+  padding:8px 10px 8px 10px;
+  margin: 5px 20px 5px 20px;
+  text-shadow: 1px 1px 1px black;
+  -webkit-box-shadow:0px 0px 3px 0px black inset;
+        box-shadow:0px 0px 3px 0px black inset;
+}
+
+
+#msgInput{
+  width:79vw;
+  margin-left:10vw;
+  margin-top:3vh;
+}
+#msgInput #msg{
+  height:8vh;
+  -webkit-box-shadow:0px 0px 3px 0px black inset,0px 0px 5px 0px black;
+        box-shadow:0px 0px 3px 0px black inset,0px 0px 5px 0px black;
+  color:rgb(214, 214, 214);
+  text-shadow: 1px 1px 1px black;
+}
+#msgInput #submitBtn{
+  height:8vh;
+  -webkit-box-shadow:0px 0px 3px 0px black inset,0px 0px 5px 0px black;
+        box-shadow:0px 0px 3px 0px black inset,0px 0px 5px 0px black;
+  background-color:rgb(15, 106, 252);
+  color:rgb(209, 209, 209);
+  font-weight:700;
+  letter-spacing:1px;
+  text-shadow:0px 0px 7px black;
+  font-family: 'Oswald', sans-serif;
+}
+@media all and (max-width:768px){
+  #messages{
+    height:400px;
+    width:96vw;
+    margin-left:2vw;
+    padding:2px 0px 2px 0px;
+    margin-bottom:0px;
+  }
+  #messages p{
+    font-size:10px;
+    padding:5px 8px 5px 8px;
+    margin: 5px 10px 5px 10px;
+  }
+  #msgInput{
+    height:50px;
+    width:96vw;
+    margin-left:2vw;
+  }
+  #msgInput #msg{
+    font-size:12px;
+  }
+  #msgInput #submitBtn{
+    font-size:12px;
+    padding:0px 20px 0px 20px;
+  }
+}
+
+.enterParagraph{
+  color:red;
+  text-align:center;
+  background-color:red!important;
+  border:0px;
+}
+.closeParagraph{
+  color:red;
+  text-align:center;
+  background-color:black!important;
+  border:0px;
+}
+
+#nickname{
+	text-shadow:0px 0px 3px white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

@@ -1,0 +1,168 @@
+body{
+  background-image:url('../images/background.png');
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#headerindex{
+  height:20vh;
+}
+
+.headertext{
+  text-align:center;
+  margin:0 auto;
+  padding-top:12px;
+  font-size:20px;
+  margin-top:2vh;
+  font-weight: 700;
+  color:rgb(117, 167, 255);
+  text-shadow:0px 1px 3px black;
+}
+
+.logo{
+  margin-top:0vh;
+}
+.social-icons{
+  margin-left:0px;
+}
+.logo img{
+	height:80px;
+}
+.social-media-icon{
+  align-items: left;
+  padding-left:20px;
+  margin-top:3vh;
+  height:7vh;
+  color:rgb(53, 224, 255);
+}
+
+.header-form{
+  font-weight: 700;
+  color:rgb(145, 185, 255);
+  text-shadow:0px 1px 3px black;
+}
+
+
+#main-container{
+
+}
+
+
+#main-container img{
+
+}
+
+#backgroundimg{
+  margin-left:8vw;
+  margin-top:20vh;
+  position:absolute;
+}
+
+#backgroundimg img{
+	width:800px;
+	height:500px;
+}
+
+@media all and (max-width: 1000px) {
+  #backgroundimg{
+    display:none;
+  }
+}
+
+#first-h4{
+	margin-top:-2vh;
+}
+
+#registerForm{
+  margin-bottom:0vh;
+  background: linear-gradient(rgba(159, 159, 160,1), rgba(159, 159, 160,0));
+  height:25vh;
+}
+
+#loginForm{
+  background: linear-gradient(rgba(159, 159, 160,1), rgba(159, 159, 160,0));
+  height:13vh;
+}
+
+.index-Forms{
+  border-radius:10px;
+  height:25vh;
+}
+.index-Forms label{
+  color:rgb(145, 185, 255);
+  text-shadow:0px 1px 3px black;
+}
+
+
+
+.register-input{
+  border-radius:4px;
+  border:1px solid black;
+  margin:5px 5px 5px 15px;
+  padding:3px 6px 3px 6px;
+  box-shadow: 0px 0px 0px black;
+  transition: all 150ms ease-in-out;
+}
+
+.register-input:focus{
+  background-color:rgb(145, 185, 255);
+  border-radius:4px;
+  box-shadow: 0px 0px 10px black;
+  outline:none;
+}
+
+.submit-Form{
+  border-radius:4px;
+  border:1px solid white;
+  margin:5px 5px 5px 15px;
+  padding:6px 6px 6px 6px;
+  color:white;
+  background-color:rgb(87, 146, 249);
+  transition:all 150ms ease-in;
+}
+.submit-Form:hover{
+  background-color:white;
+  font-weight:700;
+  color:rgb(87, 146, 249);
+  border-color:rgb(145,185,255);
+}
+
+.index-Forms label{
+  margin:10px 0px 0px 10px;
+}
+
+.crossed{
+  text-decoration:line-through;
+}
+
+@media all and (max-width:768px){
+  .social-icons{
+    margin-left:90px;
+  }
+  .social-media-icon{
+    padding-left:10px;
+    margin-top:2vh;
+    height:30px;
+  }
+  .logo img{
+    height:60px;
+  }
+  #headerindex{
+    height:50px;
+    margin-bottom:25px;
+  }
+  .headertext{
+    font-size:20px;
+  }
+  #registerForm{
+    margin-bottom:0vh;
+    height:250px;
+  }
+  .index-Forms{
+    height:200px;
+  }
+  #main-container{
+    height:60vh;
+  }
+}
