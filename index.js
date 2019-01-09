@@ -12,12 +12,12 @@ const path = require('path');
 const fs = require('fs');
 const UXscript = require('./public/js/uxscript.js');
 
-
 const options  = {
   host      :   '127.0.0.1',
   user      :   'root',
-  password  :   'hehe333',
-  database  :   'node_db'
+  password  :   '',
+  //Delete double slash after you do the /createDatabase
+  //database  :   'node_db'
 };
 
 const db = mysql.createConnection(options);
@@ -43,6 +43,7 @@ app.get('/', (req,res) => {
 });
 
 //Route for creatin table
+//1st route
 app.get('/createposttable',(req,res) => {
   let sql = 'CREATE TABLE posts(id int AUTO_INCREMENT, author VARCHAR(255), body VARCHAR(255), PRIMARY KEY (id))';
   db.query(sql, (err,result) => {
@@ -52,6 +53,7 @@ app.get('/createposttable',(req,res) => {
   });
 });
 
+//2nd route
 app.get('/createuserstable',(req,res) => {
   let sql = 'CREATE TABLE users_tb(id int AUTO_INCREMENT, login VARCHAR(255), pass VARCHAR(255), email VARCHAR(255), city VARCHAR(255), PRIMARY KEY (id))';
   db.query(sql, (err,result) => {
@@ -222,55 +224,5 @@ app.get('/chat-room',(req,res)  =>  {
     res.send('Please login in order to enter chat room');
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //sockets
