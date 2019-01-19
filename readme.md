@@ -12,7 +12,6 @@ The user can register into the application, log in and go to the chat room.
 * pm2 
 * css3 
 * html 
-* nodemon 
 
 ### To run the app correctly : 
 1. Set up ur db, for the project purposes it would be mysql 
@@ -26,4 +25,4 @@ The user can register into the application, log in and go to the chat room.
 3. Register the new user, login into the app afterwards ! 
 
 ## Project created in 02.2018 
-## Graphics done by Sebastian Zagajny  
+##### Graphics done by Sebastian Zagajny  
