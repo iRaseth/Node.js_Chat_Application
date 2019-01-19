@@ -3,7 +3,7 @@
 Project created in order to get some experience with node.js 
 The user can register into the application, log in and go to the chat room. 
 
-####Technologies used : 
+#### Technologies used : 
 node.js 
 express 
 socket.io
