@@ -25,4 +25,6 @@ The user can register into the application, log in and go to the chat room.
 3. Register the new user, login into the app afterwards ! 
 
 ## Project created in 02.2018 
+### Important mentions : 
 ##### Graphics done by Sebastian Zagajny  
+##### Code review and help -> https://github.com/Yodakasi
